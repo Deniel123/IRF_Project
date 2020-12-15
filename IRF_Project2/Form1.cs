@@ -23,11 +23,11 @@ namespace IRF_Project2
         {
             InitializeComponent();
             LoadData();
-            CreateExcel();
         }
         private void LoadData()
         {
             Patients = context.Patients.ToList();
+            dataGridView1.DataSource = Patients;
         }
         private void CreateExcel()
         {
@@ -108,6 +108,21 @@ namespace IRF_Project2
             ExcelCoordinate += x.ToString();
 
             return ExcelCoordinate;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            CreateExcel();
         }
     }
 }
