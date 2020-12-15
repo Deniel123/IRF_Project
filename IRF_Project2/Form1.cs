@@ -12,9 +12,16 @@ namespace IRF_Project2
 {
     public partial class Form1 : Form
     {
+        PatientEntities context = new PatientEntities();
+        List<Patient> Patients;
         public Form1()
         {
             InitializeComponent();
+            LoadData();
+        }
+        private void LoadData()
+        {
+            Patients = context.Patients.ToList();
         }
     }
 }
