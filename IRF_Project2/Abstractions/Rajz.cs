@@ -13,7 +13,7 @@ namespace IRF_Project2.Abstractions
         public Rajz()
         {
             AutoSize = false;
-            Width = 50;
+            Width = 150;
             Height = Width;
             Paint += Rajz_Paint;
         }
@@ -21,6 +21,11 @@ namespace IRF_Project2.Abstractions
         {
             DrawImage(e.Graphics);
         }
-        protected abstract void DrawImage(Graphics g)
+        protected abstract void DrawImage(Graphics g);
+
+        public void MoveRajz()
+        {
+            Left += 1;
+        }
     }
 }
