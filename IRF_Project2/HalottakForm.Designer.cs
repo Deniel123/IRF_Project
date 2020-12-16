@@ -37,7 +37,7 @@ namespace IRF_Project2
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(28, 21);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(317, 407);
+            this.listBox1.Size = new System.Drawing.Size(187, 407);
             this.listBox1.TabIndex = 0;
             // 
             // HalottakForm
