@@ -119,7 +119,7 @@ namespace IRF_Project2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dynamic aktualis = dataGridView1.SelectedRows;
+            dynamic aktualis = dataGridView1.CurrentRow;
             int rid = aktualis.ID;
             var torlendo = (from x in context.Patients
                             where x.ID == rid
