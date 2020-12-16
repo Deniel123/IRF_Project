@@ -50,7 +50,7 @@ namespace IRF_Project2
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(120, 51);
             this.button1.TabIndex = 1;
-            this.button1.Text = "Sor törlése";
+            this.button1.Text = "Törlés";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 

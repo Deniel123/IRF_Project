@@ -117,7 +117,8 @@ namespace IRF_Project2
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            HalottakForm hf = new HalottakForm();
+            hf.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
