@@ -29,6 +29,7 @@ namespace IRF_Project2
             Patients = context.Patients.ToList();
             dataGridView1.DataSource = Patients;
         }
+
         private void CreateExcel()
         {
             try
@@ -37,7 +38,7 @@ namespace IRF_Project2
                 xlWB = xlApp.Workbooks.Add(Missing.Value);
                 xlSheet = xlWB.ActiveSheet;
 
-                CreateTable(); 
+                CreateTable();
 
                 xlApp.Visible = true;
                 xlApp.UserControl = true;
@@ -109,10 +110,23 @@ namespace IRF_Project2
 
             return ExcelCoordinate;
         }
+        private void Frissites()
+        {
+            var frissites = from x in context.Patients
+                            select x;
+            dataGridView1.DataSource = frissites.ToList();
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            dynamic aktualis = dataGridView1.SelectedRows;
+            int rid = aktualis.Sorozatok_ID;
+            var torlendo = (from x in context.Patients
+                            where x.ID == rid
+                            select x).FirstOrDefault();
+            context.Patients.Remove(torlendo);
+            context.SaveChanges();
+            Frissites();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -127,3 +141,4 @@ namespace IRF_Project2
         }
     }
 }
+
