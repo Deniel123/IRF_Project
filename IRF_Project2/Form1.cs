@@ -112,14 +112,14 @@ namespace IRF_Project2
         }
         private void Frissites()
         {
-            var frissites = from x in context.Patients
+            /* var frissites = from x in context.Patients
                             select x;
-            dataGridView1.DataSource = frissites.ToList();
-        }
+            dataGridView1.DataSource = frissites.ToList(); */
+        } 
 
         private void button1_Click(object sender, EventArgs e)
         {
-            /*dynamic aktualis = dataGridView1.SelectedRows;
+            /* dynamic aktualis = dataGridView1.SelectedRows;
             int rid = aktualis.ID;
             var torlendo = (from x in context.Patients
                             where x.ID == rid
