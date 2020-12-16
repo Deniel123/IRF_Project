@@ -75,5 +75,19 @@ namespace IRF_Project2
             _nextRajz.Left = label1.Left;
             Controls.Add(_nextRajz);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            /*if (listBox1.SelectedIndex != -1)
+            {
+                listBox1.Items.RemoveAt(listBox1.SelectedIndex);
+            }
+
+            else
+            {
+                MessageBox.Show("Válasszon ki valamit!");
+            } */
+
+        }
     }
 }

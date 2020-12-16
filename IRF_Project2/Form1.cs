@@ -114,19 +114,19 @@ namespace IRF_Project2
         {
             var frissites = from x in context.Patients
                             select x;
-            patientBindingSource.DataSource = frissites.ToList();
+            dataGridView1.DataSource = frissites.ToList();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dynamic aktualis = patientBindingSource.Current;
+            /*dynamic aktualis = dataGridView1.SelectedRows;
             int rid = aktualis.ID;
             var torlendo = (from x in context.Patients
                             where x.ID == rid
                             select x).FirstOrDefault();
             context.Patients.Remove(torlendo);
             context.SaveChanges();
-            Frissites();
+            Frissites(); */
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -138,13 +138,6 @@ namespace IRF_Project2
         private void button3_Click(object sender, EventArgs e)
         {
             CreateExcel();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'patientDataSet.Patient' table. You can move, or remove it, as needed.
-            this.patientTableAdapter.Fill(this.patientDataSet.Patient);
-
         }
     }
 }
